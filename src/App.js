@@ -1,6 +1,5 @@
 import React from 'react';
-import ExpenseItem from './components/ExpenseItem';
-import './App.css';
+import Expenses from './components/expenses.js';
 
 function App() {
   const expenses = [
@@ -9,10 +8,8 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      {expenses.map((expense, index) => (
-        <ExpenseItem key={index} data={expense} />
-      ))}
+    <div>
+      <Expenses items={expenses} />
     </div>
   );
 }
