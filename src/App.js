@@ -1,21 +1,17 @@
+import React from 'react';
 import ExpenseItem from './components/ExpenseItem';
+import './App.css';
 
 function App() {
   const expenses = [
-    { date: "2024-01-01", title: "Groceries", price: "$94.12" },
-    { date: "2024-01-02", title: "Rent", price: "$450.00" },
-    { date: "2024-01-03", title: "Electricity Bill", price: "$30.00" },
+    { date: new Date(2023, 0, 10), title: 'New book', price: '$30.99' },
+    { date: new Date(2023, 0, 10), title: 'New jeans', price: '$99.99' },
   ];
 
   return (
-    <div>
+    <div className="App">
       {expenses.map((expense, index) => (
-        <ExpenseItem 
-          key={index}
-          date={expense.date} 
-          title={expense.title} 
-          price={expense.price} 
-        />
+        <ExpenseItem key={index} data={expense} />
       ))}
     </div>
   );
