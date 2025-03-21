@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import ReactDOM from "react-dom"
-import Card from "./Card";
+import Card from "./card";
 import Button from "./Button";
 import "./Error.css"
 const BackDrop = () => {
